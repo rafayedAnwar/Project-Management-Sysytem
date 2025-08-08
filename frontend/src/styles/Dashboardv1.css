@@ -1,0 +1,221 @@
+/* Dashboard Layout */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-content {
+  padding: 20px;
+  flex: 1;
+}
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  font-size: 18px;
+  color: #666;
+}
+.dashboard-header {
+  margin-bottom: 20px;
+}
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+.dashboard-date {
+  color: #666;
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dashboard-top-row,
+.dashboard-bottom-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Card Styles */
+.dashboard-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+.dashboard-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.card-content {
+  margin-bottom: 15px;
+}
+.no-data {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
+/* Pending Requests */
+.request-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.request-item:last-child {
+  border-bottom: none;
+}
+.request-title {
+  font-weight: 500;
+  flex: 2;
+}
+.request-date,
+.request-status {
+  color: #666;
+  font-size: 14px;
+  flex: 1;
+  text-align: right;
+}
+.request-status {
+  text-transform: capitalize;
+}
+.view-all-btn {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+.view-all-btn:hover {
+  background-color: #f5f5f5;
+}
+/* Active Projects */
+.project-item {
+  margin-bottom: 15px;
+}
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.project-name {
+  font-weight: 500;
+}
+.project-progress {
+  color: #666;
+}
+.progress-bar-container {
+  height: 6px;
+  background-color: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background-color: #4a90e2;
+  border-radius: 3px;
+}
+/* Team Members */
+.member-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.member-item:last-child {
+  border-bottom: none;
+}
+.member-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #4a90e2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.member-info {
+  flex: 1;
+}
+.member-name {
+  font-weight: 500;
+}
+.member-role {
+  font-size: 12px;
+  color: #666;
+}
+.member-status {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.member-status.online {
+  background-color: #e6f7ee;
+  color: #28a745;
+}
+.member-status.offline {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+/* Notifications */
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.notification-item {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border-left: 3px solid transparent;
+}
+.notification-item.unread {
+  background-color: #f0f7ff;
+  border-left-color: #4a90e2;
+}
+.notification-item.read {
+  opacity: 0.7;
+}
+.notification-message {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.notification-time {
+  font-size: 12px;
+  color: #666;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-top-row,
+  .dashboard-bottom-row {
+    flex-direction: column;
+  }
+  .dashboard-card {
+    min-width: 100%;
+  }
+}

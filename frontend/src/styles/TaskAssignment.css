@@ -1,0 +1,184 @@
+/* Task Assignment Page Styles */
+.task-assignment-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+}
+.task-assignment-content {
+  padding: 20px;
+  flex: 1;
+}
+.task-assignment-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  font-size: 18px;
+  color: #666;
+}
+.task-assignment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.task-assignment-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+.task-count {
+  color: #666;
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+.back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.back-button:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+/* Task Card Styles */
+.task-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.task-header {
+  margin-bottom: 12px;
+}
+.task-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+.task-project {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 8px;
+  background-color: #e6f7ff;
+  color: #1890ff;
+  border-radius: 10px;
+}
+.task-description {
+  margin-bottom: 15px;
+}
+.task-description p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+.task-deadline {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.deadline-label {
+  font-size: 12px;
+  color: #666;
+  margin-right: 5px;
+}
+.deadline-date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+/* Assignment Form Styles */
+.assignment-form {
+  margin-top: auto;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+}
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+.done-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.done-button:hover {
+  background-color: #3a7bc8;
+}
+.done-button:disabled {
+  background-color: #a0c1e8;
+  cursor: not-allowed;
+}
+/* Empty State */
+.no-tasks {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.no-tasks p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.return-dashboard {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.return-dashboard:hover {
+  background-color: #3a7bc8;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+}
